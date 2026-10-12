@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {translate} from './i18n.mjs';
+assert.equal(translate('zh','createRoom'),'创建房间');
+assert.equal(translate('en','joinRoom'),'Join room');
+assert.equal(translate('en','rules'),'玩法');
+assert.equal(translate('fr','joinRoom'),'加入房间');
+assert.equal(translate(null,'joinRoom'),'加入房间');
+assert.equal(translate('en','missing'),'[missing]');
+assert.equal(translate('en','toString'),'[toString]');
+assert.equal(translate('__proto__','joinRoom'),'加入房间');
+assert.throws(()=>translate('zh',''),TypeError);
+console.log('9 assertions passed');
